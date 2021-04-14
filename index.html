@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>CANVAS</title>
+	<link rel="stylesheet" href="style/style.css">
+	<script src="js/Battlefield.js" defer></script>
+	<script src="js/main.js" defer></script>
+	<script src="js/events.js" async></script>
+	<script src="js/start.js" async></script>
+	<script src="js/button.js" async></script>
+</head>
+
+<body>
+	<div class="main">
+		<div class="field">
+	   		<canvas id="canvas1" width="300" height="300">
+	        	Ваш браузер не поддерживает Canvas
+	    	</canvas>
+		</div>
+		<div class="field setting">
+			<div class="div_label" data-title1="Ваш ход" data-title2="Ход соперника" data-exit1="Вы выиграли!" data-exit2="Вы проиграли"></div>
+			<a class='button5' data-vk id='play'>Играть</a>
+			<div id='time'></div>			
+			<div id='players'>
+				<label>Первый ход</label>
+				<br>
+				<label for='player'>Игрок</label>
+				<input id='player' type='radio' data-player='Ваш ход' onfocus='pc.checked=false;' checked>
+				<label for='pc'>Компьютер</label>
+				<input id='pc' type='radio' data-player='Ход противника' onfocus='player.checked=false;'>
+			</div>	
+			<div id='complexity'>
+				<label>Сложность</label>
+				<br>
+				<label for='easy'>Легко</label>
+				<input id='easy' type='radio' data-seconds='8' checked onfocus='medium.checked=false;hard.checked=false;'>
+				<label for='medium'>Средне</label>
+				<input id='medium' type='radio' data-seconds='8' onfocus='easy.checked=false;hard.checked=false;'>
+				<label for='hard'>Тяжело</label>
+				<input id='hard' type='radio' data-seconds='8' onfocus='easy.checked=false;medium.checked=false;'>
+			</div>
+			<label for='autoplay'>Авторасстановка</label>
+			<input id='autoplay' type='checkbox' checked>	
+		</div>
+		<div class="field">
+		    <canvas id="canvas2" width="300" height="300">
+		        Ваш браузер не поддерживает Canvas
+		    </canvas>
+		</div>
+   </div>
+
+</body>
+
+</html>
